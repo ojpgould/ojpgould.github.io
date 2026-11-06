@@ -1,0 +1,114 @@
+<!-- drawn by page-jig.html from page-settings.json with from-jig.mjs -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Small tools for writing and reading</title>
+<style>
+html { background: hsla(228,50%,90%,1); }
+@media (prefers-color-scheme: dark) { html { background: hsla(228,20%,24%,1); } }
+body { margin: 0; }
+.site { --bg:hsla(228,50%,90%,1);--fg:hsla(228,20%,11%,1);--muted:hsla(228,7%,42%,1);--line:hsla(228,15%,25%,0.10400000000000001);--card:rgba(255,255,255,0.58);--accent:hsla(9,75%,51%,1); container-type: inline-size; min-height: 100vh; background: var(--bg); color: var(--fg); font: 18px/1.55 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+@media (prefers-color-scheme: dark) { .site:not([data-theme="light"]) { --bg:hsla(228,20%,24%,1);--fg:hsla(228,10%,93%,1);--muted:hsla(228,6%,64%,1);--line:hsla(228,10%,80%,0.116);--card:rgba(255,255,255,0.048);--accent:hsla(9,75%,71%,1); } }
+.site[data-theme="dark"] { --bg:hsla(228,20%,24%,1);--fg:hsla(228,10%,93%,1);--muted:hsla(228,6%,64%,1);--line:hsla(228,10%,80%,0.116);--card:rgba(255,255,255,0.048);--accent:hsla(9,75%,71%,1); }
+.site * { box-sizing: border-box; }
+.site a { color: var(--accent); text-decoration: none; }
+.page { max-width: 934px; margin: 0 auto; padding: 0 24px; }
+header { padding: 72px 0 41px; text-align: center; }
+header h1 { font-size: 59px; line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 14px; font-weight: 700; }
+header p { color: var(--muted); font-size: 20px; max-width: 600px; margin: 0 auto; }
+.dock { display: inline-flex; gap: 18px; padding: 14px 20px; margin-top: 36px; border: 1px solid var(--line); border-radius: 30px; background: var(--card); }
+.dock a { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--muted); font-size: 12px; }
+.dock img { width: 56px; height: 56px; }
+img.pad { padding: 9%; }
+.icon { width: 190px; height: 190px; display: block; filter: drop-shadow(0 12px 21px rgba(0,0,0,0.23)); }
+.kind { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin: 0 0 6px; }
+.product h2 { font-size: 39px; letter-spacing: -0.015em; margin: 0 0 4px; line-height: 1.15; }
+.tag { font-size: 22px; margin: 0 0 16px; font-weight: 500; }
+.what { margin: 0 0 18px; max-width: 620px; }
+.inspired { display: flex; gap: 12px; align-items: baseline; max-width: 620px; margin: 0; padding: 12px 16px; border-radius: 15px; background: var(--card); border: 1px solid var(--line); font-size: 16px; color: var(--muted); }
+.inspired b { color: var(--fg); font-weight: 600; white-space: nowrap; }
+.product { padding: 58px 0; border-top: 1px solid var(--line); }
+footer { border-top: 1px solid var(--line); padding: 32px 0 64px; color: var(--muted); font-size: 14px; text-align: center; }
+.product { display: grid; grid-template-columns: 190px 1fr; gap: 40px; align-items: start; }
+@container (max-width: 680px) {
+  header { padding: 48px 0 28px; }
+  header h1 { font-size: 32px; }
+  header p { font-size: 18px; }
+  .dock { gap: 10px; padding: 10px 12px; }
+  .dock img { width: 44px; height: 44px; }
+  .dock span { display: none; }
+  .product, .product:nth-child(even) { grid-template-columns: 1fr; gap: 18px; }
+  .product:nth-child(even) .icon { order: 0; }
+  .icon { width: 104px; height: 104px; }
+  .product h2 { font-size: 28px; }
+  .inspired { flex-direction: column; gap: 2px; }
+}
+</style>
+</head>
+<body>
+<div class="site layout-rows">
+<div class="page">
+<header>
+<h1>Small tools for writing and reading</h1>
+<p>Mac apps I build for my own work: quiet, offline where they can be, and made to do one job well.</p>
+<nav class="dock"><a href="#marginalia"><img class="" src="icons/marginalia.png" alt=""><span>Marginalia</span></a><a href="#mood"><img class="" src="icons/mood.png" alt=""><span>Mood</span></a><a href="#mesocene"><img class="" src="icons/mesocene.png" alt=""><span>Mesocene</span></a><a href="#lazer"><img class="" src="icons/lazer.png" alt=""><span>Lazer</span></a><a href="#glider"><img class=" pad" src="icons/glider.png" alt=""><span>Glider</span></a></nav>
+</header>
+<div class="apps">
+<section class="product" id="marginalia">
+<img class="icon" src="icons/marginalia.png" alt="Marginalia icon">
+<div>
+<p class="kind">Mac app · Markdown editor</p>
+<h2>Marginalia</h2>
+<p class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="what">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="inspired"><b>Inspired by</b><span>duis aute irure dolor in reprehenderit in voluptate velit esse.</span></p>
+</div>
+</section>
+<section class="product" id="mood">
+<img class="icon" src="icons/mood.png" alt="Mood icon">
+<div>
+<p class="kind">Mac app · Notes and tasks</p>
+<h2>Mood</h2>
+<p class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="what">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="inspired"><b>Inspired by</b><span>duis aute irure dolor in reprehenderit in voluptate velit esse.</span></p>
+</div>
+</section>
+<section class="product" id="mesocene">
+<img class="icon" src="icons/mesocene.png" alt="Mesocene icon">
+<div>
+<p class="kind">Mac app · Document archaeology</p>
+<h2>Mesocene</h2>
+<p class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="what">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="inspired"><b>Inspired by</b><span>duis aute irure dolor in reprehenderit in voluptate velit esse.</span></p>
+</div>
+</section>
+<section class="product" id="lazer">
+<img class="icon" src="icons/lazer.png" alt="Lazer icon">
+<div>
+<p class="kind">Mac app · Writing harness</p>
+<h2>Lazer</h2>
+<p class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="what">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="inspired"><b>Inspired by</b><span>duis aute irure dolor in reprehenderit in voluptate velit esse.</span></p>
+</div>
+</section>
+<section class="product" id="glider">
+<img class="icon pad" src="icons/glider.png" alt="Glider icon">
+<div>
+<p class="kind">Mac and web app · Email drafts</p>
+<h2>Glider</h2>
+<p class="tag">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="what">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p class="inspired"><b>Inspired by</b><span>duis aute irure dolor in reprehenderit in voluptate velit esse.</span></p>
+</div>
+</section>
+</div>
+<footer>This is a test.</footer>
+</div>
+</div>
+</body>
+</html>
